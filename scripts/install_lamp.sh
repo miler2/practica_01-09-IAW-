@@ -4,19 +4,19 @@
 set -ex
 
 #actualizamos los repositorios
-sudo apt update
+apt update
 
 #Actualizamos los paquetes
-#sudo apt upgrade -y
+#apt upgrade -y
 
 #Instalamos el servidor web Apache
-sudo apt install apache2 -y
+apt install apache2 -y
 
 #Instalamos el sistema gestor de bases de datos MySQL
-sudo apt install mysql-server -y
+apt install mysql-server -y
 
 #Instalamos php
-sudo apt install php libapache2-mod-php php-mysql -y
+apt install php libapache2-mod-php php-mysql -y
 
 #Copiamos nuestro archivo de configuración a su sitio, para que se apliquen los cambios.
 cp ../conf/000-default.conf /etc/apache2/sites-available/
