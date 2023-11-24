@@ -27,8 +27,8 @@ a2enmod lbmethod_byrequests
 cp ../conf/load-balancer.conf /etc/apache2/sites-available
 
 #Reemplazamos los valores de la plantilla por las direcciones IP de los frontales
-sed -i "s/IP_HTTP_SERVER_1/$IP_HTTP_SERVER1/" /etc/apache2/sites-available/load-balancer.conf
-sed -i "s/IP_HTTP_SERVER_2/$IP_HTTP_SERVER2/" /etc/apache2/sites-available/load-balancer.conf
+sed -i "s/IP_HTTP_SERVER_1/$IP_HTTP_SERVER_1/" /etc/apache2/sites-available/load-balancer.conf
+sed -i "s/IP_HTTP_SERVER_2/$IP_HTTP_SERVER_2/" /etc/apache2/sites-available/load-balancer.conf
 
 #Habilitamos el VirtualHost que acabmos de crear
 sudo a2ensite load-balancer.conf
